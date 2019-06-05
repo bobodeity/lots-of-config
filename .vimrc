@@ -52,6 +52,7 @@ set tm=500
 
 " NERDTree Config
 let NERDTreeIgnore = ['\.git$', '^\.ftp*$', '\.DS_Store$']
+let g:NERDTreeNodeDelimiter = "\u00a0"
 noremap <F2> :NERDTreeToggle<Enter>
 
 " fzf Config
