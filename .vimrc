@@ -36,6 +36,7 @@ set noexpandtab
 set tabstop=2                           " tab character size
 set softtabstop=2                       " tab indent size
 set shiftwidth=2                        " auto indent size
+set expandtab
 
 " Search
 set hlsearch                            " search highlighting
