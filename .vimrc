@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'bfredl/nvim-miniyank'
 Plug 'scrooloose/nerdtree'
+Plug 'w0rp/ale'
 
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -75,3 +76,29 @@ let g:fzf_colors={
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment']
   \ }
+
+" Asynchronous Lint Engine (ALE)
+let g:ale_sign_error = '✗'
+let g:ale_fix_on_save = 0
+let g:ale_completion_enabled = 1
+let g:ale_php_phpcs_standard = "PSR2"
+let g:ale_fixers = {
+\     '*': [ 'remove_trailing_lines', 'trim_whitespace' ],
+\     'php': [ 'php_cs_fixer' ],
+\     'javascript': [ 'eslint', 'prettier' ],
+\   }
+let b:ale_fixers = [ 'prettier', 'eslint' ]
+let b:ale_fixers = {
+\     '*': [ 'remove_trailing_lines', 'trim_whitespace' ],
+\     'php': [ 'php_cs_fixer' ]
+\   }
+
+set omnifunc=ale#completion#OmniFunc
+
+noremap <F3> :ALEToggle<Enter>
+noremap <F4> :ALEFix<Enter>
+
+
+" php-cs-fixer
+let g:php_cs_fixer_rules = "PSR2"
+let g:php_cs_fixer_enable_default_mapping = 0
