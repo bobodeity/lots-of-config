@@ -53,7 +53,11 @@ set tm=500
 
 " NERDTree Config
 let NERDTreeIgnore = ['\.git$', '^\.ftp*$', '\.DS_Store$']
-let g:NERDTreeNodeDelimiter = "\u00a0"
+ let g:NERDTreeWinPos = "left"
+ let g:NERDTreeNodeDelimiter = "\u00a0"
+ let g:NERDTreeDirArrowExpandable = '▸'
+ let g:NERDTreeDirArrowCollapsible = '▾'
+ let g:NERDTreeWinSize=30
 noremap <F2> :NERDTreeToggle<Enter>
 
 " fzf Config
