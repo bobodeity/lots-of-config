@@ -3,6 +3,9 @@
 " sh ~/.vim_runtime/install_awesome_vimrc.sh
 " curl -fLo ~/.vim_runtime/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 " wget -O ~/.vim_runtime/my_configs.vim https://raw.githubusercontent.com/bobodeity/lots-of-config/master/.vimrc
+" vim ~/.vim_runtime/my_configs.vim
+" :PlugInstall
+" finish!!
 
 call plug#begin('~/.vim_runtime/my_plugins')
 Plug 'tpope/vim-fugitive'
