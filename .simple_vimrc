@@ -1,0 +1,40 @@
+" Normal
+set fileencodings=utf-8,utf-16,big5,gb2312,gbk,gb18030,euc-jp,euc-kr,latin1
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+filetype plugin indent on
+syntax on
+
+highlight Comment ctermfg=white ctermbg=darkblue
+highlight CursorLine cterm=none ctermbg=233 ctermfg=none
+highlight CursorColumn cterm=none ctermbg=233 ctermfg=none
+
+set nocompatible                        " not compatible with the old-fashion vi mode
+set backspace=2                         " allow backspacing over everything in insert nc >kkmode
+set history=500                         " keep 500 lines of command line history
+set laststatus=2
+set showcmd
+set noautowrite                         " when the file blur don't auto save
+set confirm
+
+" Indent
+set nosmartindent
+set noautoindent
+set nocindent
+set noexpandtab
+set tabstop=2                           " tab character size
+set softtabstop=2                       " tab indent size
+set shiftwidth=2                        " auto indent size
+set expandtab
+
+" Search
+set hlsearch                            " search highlighting
+set incsearch                           " real-time searching
+set ignorecase                          " ignore case when searching
+set smartcase                           " when you search 'the' then 'the', 'The' will match, if you search 'The' then it will match 'The' only
+
+" Disable sound on errors
+set visualbell
+set noerrorbells
+set t_vb=
+set tm=500
