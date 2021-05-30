@@ -5,12 +5,14 @@
 " wget -O ~/.vim_runtime/my_configs.vim https://raw.githubusercontent.com/bobodeity/lots-of-config/master/.vimrc
 " vim ~/.vim_runtime/my_configs.vim
 " :PlugInstall
+" npm install -g eslint
 " finish!!
 
 call plug#begin('~/.vim_runtime/my_plugins')
 Plug 'tpope/vim-fugitive'
-Plug 'bfredl/nvim-miniyank'
+" Plug 'bfredl/nvim-miniyank'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
 Plug 'w0rp/ale'
 
 Plug 'junegunn/fzf'
@@ -57,6 +59,17 @@ set visualbell
 set noerrorbells
 set t_vb=
 set tm=500
+
+" JS sync check
+set statusline+=%#warningmsg#
+let g:ale_linters = {'javascript': ['eslint']}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint'
 
 " NERDTree Config
 let NERDTreeIgnore = ['\.git$', '^\.ftp*$', '\.DS_Store$']
